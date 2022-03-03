@@ -11,9 +11,21 @@ import PlaceDetails from './components/PlaceDetails/PlaceDetails'
 
 const App = ()=> {
     return ( 
-        <div>
-            <h1> Hello world</h1>
-        </div>
+        <>
+            <CssBaseline />  
+            {/* It's a component from material-ui, that simply normalise the styles i.e it will fix some padding, margine, background color immediatley. */}
+            <Header />
+            <Grid container spacing={5} style={{width: '100%'}}>
+                <Grid item xs={12} md={4}>
+                    <List />
+                </Grid>
+                <Grid item xs={12} md={8}>
+                    <Map />
+                </Grid>
+                
+            </Grid>
+
+        </>
     )
 }
 
